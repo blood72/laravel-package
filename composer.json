@@ -1,0 +1,46 @@
+{
+    "name": "blood72/laravel-package",
+    "type": "library",
+    "description": "Laravel package template",
+    "license": "MIT",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "blood72",
+            "email": "blood72@naver.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/blood72/laravel-package/issues",
+        "source": "https://github.com/blood72/laravel-package"
+    },
+    "require": {
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Blood72\\Package\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Blood72\\Package\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Blood72\\Package\\PackageServiceProvider"
+            ],
+            "aliases": {
+                "Package": "Blood72\\Package\\Facades\\PackageFacade"
+            }
+        }
+    },
+    "scripts": {
+        "format": "php-cs-fixer fix .",
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev"
+}
